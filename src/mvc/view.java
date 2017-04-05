@@ -3,30 +3,29 @@ package mvc;
 import java.util.Scanner;
 
 public class view {
-//  Scanner for user Input
+//    make scanner for input
     Scanner input = new Scanner(System.in);
+//    store user input
+    String userString;
 
-    int number;
-
-//    prints the info that the user will see
+//    print palindrome checker intro upon instance creation
     public view() {
-        System.out.println("Square Calculator");
-        System.out.println("Enter the number to square:");
-        number = input.nextInt();
+        System.out.println("Please enter in a word of your choice:");
+        userString = input.nextLine();
     }
 
-//  returns the number entered by the user.
-    public int getUserNumber() {
-        return number;
+//    returns userString
+    public String getUserString() {
+        return userString;
     }
 
 
-    public void square(int square){
-        System.out.println("This is your number squared: " + square);
+    public void isPalindrome(){
+        System.out.println("Yes! This is a Palindrome.");
     }
-    
-    
 
+    public void notPalindrome(){
+        System.out.println("No! This is not a Palindrome.");
+    }
 
 }
-

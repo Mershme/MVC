@@ -3,10 +3,14 @@ package mvc;
 public class create {
 
     public static void main(String[] args) {
+//        create view
+        view view = new view();
+//        create model
+       model model = new model();
 
-        view sView = new view();
-        model sModel = new model();
-        controller  sController = new controller(sView, sModel);
+//        create controller and pass view and model into constructor
+        controller controller = new controller(view, model);
     }
 }
+
 

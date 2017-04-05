@@ -2,23 +2,24 @@ package mvc;
 
 public class model {
 
-    int numberSquared;
+//    variable to hold true or false
+    boolean isPalindrome;
 
 //    default constructor
     public model(){
 
     }
 
-//    squares the number received from the user.
-    public void numberSquared(int userNumber){
-        numberSquared = userNumber * userNumber;
-    }
-    
-// returns the number that was squared.
-    public int isSquared(){
-    	return numberSquared;
+//    checks to see if string is palindrome and saves boolean
+    public void isPal(String pal){
+        isPalindrome = pal.equals(new StringBuilder(pal).reverse().toString());
     }
 
+//    returns boolean palindrome value
+    public boolean isPalindrome() {
+        return isPalindrome;
+    }
 
 }
+
 
